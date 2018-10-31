@@ -1,0 +1,80 @@
+---
+title: "vector_str"
+author: "Shan Jiang"
+date: "10/30/2018"
+output: github_document
+---
+## R Data Type
+
+R has five basic or "atomic" classes of objects.
+
+* character
+* numeric
+* integer
+* complex
+* logical(True/False)
+
+\newline
+The basic object is a **vector**. 
+Everything in a vector has to be the **same class**. 
+But the only exception is a *list*, which is represented as a vector but can contain objects of different classes(indeed, that's why we use them).
+```{r}
+
+```
+#### Numbers
+* The Numbers are treated as double precision real value.  
+* If you expilicitly wants to have an interger, then add an *L*as a suffix.
+
+```{r}
+cha_1 = c("1")
+class(cha_1)
+
+num_1 = c(1)
+class(num_1)
+
+# int_1 as integer, capitalized L gets you the integer 
+int_1 = c(1L)
+class(int_1)
+
+# Infinity in the special number, stands for infinity
+inf_1 = c(1/Inf)
+inf_1 
+```
+
+
+#### C Function
+
+concatenate = c  
+```{r}
+library(tidyverse)
+string_vec = c("my", "name", "is", "jeff")
+
+str_detect(string_vec, "jeff")
+## [1] FALSE FALSE FALSE  TRUE
+
+str_replace(string_vec, "jeff", "Jeff")
+
+```
+
+* Explicit Coercion in the R.
+```{r}
+string_vec = as.logical(string_vec)
+```
+
+## list 
+list can be of anything and can be consisted of any type of data.
+```{r}
+model_ls = list("a", "90", "T")
+```
+
+## Factor 
+```{r}
+x <- factor(c("yes", "no", "yes", "no", "yes"))
+table(x)
+unclass(x)
+
+## tell r to use the yes as the baseline level
+x <- factor(c("yes", "no", "yes", "no", "yes"), levels = c("yes", "no"))
+x
+```
+
