@@ -42,6 +42,26 @@ class(int_1)
 inf_1 = c(1/Inf)
 inf_1 
 ```
+The objects can have alot of attributes and can be shown as:
+```{r}
+# length, which you can determine with length().
+x <- list("a", "b", 1:10)
+length(x)
+
+# Scalars may have 
+x <- c("a", "b", 1:10)
+length(x)
+```
+
+```{r}
+# Its type, which you can determine with typeof().
+typeof(letters)
+
+typeof(1:10)
+```
+
+
+
 * *NaN* stands for "not a number".
 
 

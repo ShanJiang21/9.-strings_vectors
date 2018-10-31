@@ -18,7 +18,81 @@ The basic object is a **vector**. Everything in a vector has to be the
 as a vector but can contain objects of different classes(indeed, that’s
 why we use them).
 
-## C Function
+#### Numbers
+
+  - The Numbers are treated as double precision real value.
+
+<!-- end list -->
+
+``` r
+cha_1 = c("1")
+class(cha_1)
+```
+
+    ## [1] "character"
+
+``` r
+num_1 = c(1)
+class(num_1)
+```
+
+    ## [1] "numeric"
+
+  - If you expilicitly wants to have an interger, then add an *L* as a
+    suffix.
+
+<!-- end list -->
+
+``` r
+# int_1 as integer, capitalized L gets you the integer 
+int_1 = c(1L)
+class(int_1)
+```
+
+    ## [1] "integer"
+
+``` r
+# Infinity in the special number, stands for infinity
+inf_1 = c(1/Inf)
+inf_1 
+```
+
+    ## [1] 0
+
+The objects can have alot of attributes and can be shown as:
+
+``` r
+# length, which you can determine with length().
+x <- list("a", "b", 1:10)
+length(x)
+```
+
+    ## [1] 3
+
+``` r
+# Scalars may have 
+x <- c("a", "b", 1:10)
+length(x)
+```
+
+    ## [1] 12
+
+``` r
+# Its type, which you can determine with typeof().
+typeof(letters)
+```
+
+    ## [1] "character"
+
+``` r
+typeof(1:10)
+```
+
+    ## [1] "integer"
+
+  - *NaN* stands for “not a number”.
+
+#### C Function
 
 concatenate =
     c
