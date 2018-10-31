@@ -23,7 +23,6 @@ But the only exception is a *list*, which is represented as a vector but can con
 ```
 #### Numbers
 * The Numbers are treated as double precision real value.  
-* If you expilicitly wants to have an interger, then add an *L*as a suffix.
 
 ```{r}
 cha_1 = c("1")
@@ -31,7 +30,10 @@ class(cha_1)
 
 num_1 = c(1)
 class(num_1)
+```
 
+* If you expilicitly wants to have an interger, then add an *L* as a suffix.
+```{r}
 # int_1 as integer, capitalized L gets you the integer 
 int_1 = c(1L)
 class(int_1)
@@ -40,6 +42,7 @@ class(int_1)
 inf_1 = c(1/Inf)
 inf_1 
 ```
+* *NaN* stands for "not a number".
 
 
 #### C Function
